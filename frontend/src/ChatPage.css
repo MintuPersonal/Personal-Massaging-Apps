@@ -1,0 +1,358 @@
+/* Base Layout */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f2f2f2;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+/* DARK MODE BACKGROUND */
+.chat-container.dark {
+    background: #1a1a1a;
+}
+
+/* Top Bar */
+.top-bar {
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+/* Top Bar Dropdown */
+.top-bar button {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chat-container.dark .top-bar button {
+    color: #ddd;
+}
+
+.top-5 {
+    margin-top: -20px;
+}
+
+/* Form Elements */
+select,
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: white;
+    color: #333;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* User Management Styles */
+.user-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.user-select {
+    min-width: 150px;
+    max-width: 200px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4L6 8L9 4' fill='none' stroke='%23666' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 12px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.chat-container.dark .user-select {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+.new-user-input {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    max-width: 500px;
+}
+
+.new-user-input input {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.create-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.create-btn:hover {
+    background-color: #45a049;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.message-sender {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.message-text {
+    font-size: 16px;
+}
+
+.message-input {
+    margin-top: 20px;
+}
+
+.message-input input:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.chat-container.dark .message-input input:disabled {
+    background-color: #2a2a2a;
+    color: #666;
+}
+
+/* Dark Mode Form Elements */
+.chat-container.dark select,
+.chat-container.dark input {
+    background: #333;
+    border-color: #555;
+    color: white;
+}
+
+/* Button Styles */
+button {
+    background: #4ade80;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #22c55e;
+}
+
+.chat-container.dark button {
+    background: #4ade80;
+}
+
+.chat-container.dark button:hover {
+    background: #22c55e;
+}
+
+/* Messages */
+.messages-box {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+/* Alignment */
+.message-row {
+    display: flex;
+}
+
+.msg-left {
+    justify-content: flex-start;
+}
+
+.msg-right {
+    justify-content: flex-end;
+}
+
+/* Message Bubbles */
+.message-bubble {
+    max-width: 60%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Sent Messages */
+.my-msg {
+    background: #4ade80;
+    border-bottom-right-radius: 4px;
+}
+
+/* Received Messages */
+.other-msg {
+    background: #444;
+    border-bottom-left-radius: 4px;
+    color: white;
+}
+
+/* DARK MODE BUBBLES */
+.chat-container.dark .my-msg {
+    background: #4ade80;
+}
+
+.chat-container.dark .other-msg {
+    background: #2b2b2b;
+    color: white;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #bbb;
+    background: white;
+    outline: none;
+    transition: 0.3s;
+    color: #333;
+}
+
+/* DARK MODE INPUT */
+.chat-container.dark .input-area input {
+    background: #333;
+    border-color: #555;
+    color: white;
+}
+
+.input-area button {
+    background: #4ade80;
+    padding: 10px 18px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.input-area button:hover {
+    background: #22c55e;
+}
+
+/* Label Styles */
+label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chat-container.dark label {
+    color: #ddd;
+}
+
+/* Select Specific Styling */
+select {
+    cursor: pointer;
+    min-width: 120px;
+}
+
+select:focus {
+    border-color: #4ade80;
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2);
+}
+
+.chat-container.dark select:focus {
+    border-color: #4ade80;
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.3);
+}
+
+/* Toast Styles for react-hot-toast */
+.toast-container {
+    font-family: Arial, sans-serif;
+}
+
+.toast-success {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    font-size: 14px !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.toast-error {
+    background-color: #f44336 !important;
+    color: white !important;
+}
+
+.toast-loading {
+    background-color: #ff9800 !important;
+    color: white !important;
+}
+
+
+/* Deep Pink Select Styles */
+.deep-pink-select {
+  background-color: #ce4a90; /* Deep pink */
+  color: white;
+  border: 2px solid #c71585;
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 500;
+}
+
+.deep-pink-select:focus {
+  background-color: #ce4a90;
+  border-color: #8b008b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 20, 147, 0.3);
+}
+
+/* Deep pink selected option in dropdown */
+.deep-pink-select option:checked {
+  background-color: #ce4a90 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.deep-pink-select option:hover {
+  background-color: #ff69b4 !important;
+}
+
+/* Dark mode support */
+.chat-container.dark .deep-pink-select {
+  background-color: #ce4a90;
+  color: white;
+  border-color: #c71585;
+}
+
+.chat-container.dark .deep-pink-select option {
+  background-color: #333;
+  color: white;
+}
+
+.chat-container.dark .deep-pink-select option:checked {
+  background-color: #ce4a90 !important;
+  color: white !important;
+}
+
